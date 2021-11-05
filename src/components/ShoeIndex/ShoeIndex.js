@@ -48,7 +48,6 @@ const Wrapper = styled.div`
 `;
 
 const LeftColumn = styled.div`
-  min-width: 248px;
   flex: 0 0 248px;
 `;
 
