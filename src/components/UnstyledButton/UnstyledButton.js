@@ -18,4 +18,5 @@ export default styled.button`
   &:focus:not(:focus-visible) {
     outline: none;
   }
+
 `;

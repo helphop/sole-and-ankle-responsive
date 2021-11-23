@@ -7,6 +7,8 @@ import SearchInput from '../SearchInput';
 import UnstyledButton from '../UnstyledButton';
 import Icon from '../Icon';
 
+import { QUERIES} from '../../constants';
+
 const SuperHeader = () => {
   return (
     <Wrapper>
@@ -22,28 +24,41 @@ const SuperHeader = () => {
   );
 };
 
+
 const Wrapper = styled.div`
-  font-size: 0.875rem;
   color: ${COLORS.gray[300]};
   background-color: ${COLORS.gray[900]};
-  display: flex;
-  padding: 8px 32px;
-  gap: 24px;
+  height: 4px;
+  @media ${ QUERIES.tabletAndUp} {
+    height: initial;
+    font-size: 0.875rem;
+    display: flex;
+    padding: 8px 32px;
+    gap: 24px;
+  }
 `;
 
 const MarketingMessage = styled.span`
-  color: ${COLORS.white};
-  margin-right: auto;
+  display: none;
+  @media ${ QUERIES.tabletAndUp} {
+    display: inline;
+   color: ${COLORS.white};
+   margin-right: auto;
+  }
 `;
 
 const HelpLink = styled.a`
-  color: inherit;
-  text-decoration: none;
-  outline-offset: 2px;
+  display: none;
+  @media ${ QUERIES.tabletAndUp} {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    outline-offset: 2px;
 
-  &:not(:focus-visible) {
-    outline: none;
-  }
+    &:not(:focus-visible) {
+      outline: none;
+    }
+}
 `;
 
 export default SuperHeader;
